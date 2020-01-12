@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueStrings:
   - Yo.
-  - Fuck Bagool.
+  - I don't like Bagool.
   dialogueStringsSize: 2
   currentStringsSize: 2
   speakerName: Robert
