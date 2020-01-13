@@ -6,17 +6,34 @@ public static class DialogueMethods
 {
     public static void SetDialogueStringSize(DialogueData data)
     {
-        while (data.currentStringsSize != data.dialogueStringsSize)
+        while (data.currentDialogueStringsSize != data.dialogueStringsSize)
         {
-            if (data.currentStringsSize < data.dialogueStringsSize)
+            if (data.currentDialogueStringsSize < data.dialogueStringsSize)
             {
                 data.dialogueStrings.Add("");
-                data.currentStringsSize++;
+                data.currentDialogueStringsSize++;
             }
-            else if (data.currentStringsSize > data.dialogueStringsSize)
+            else if (data.currentDialogueStringsSize > data.dialogueStringsSize)
             {
-                data.dialogueStrings.RemoveAt(data.currentStringsSize - 1);
-                data.currentStringsSize--;
+                data.dialogueStrings.RemoveAt(data.currentDialogueStringsSize - 1);
+                data.currentDialogueStringsSize--;
+            }
+        }
+    }
+
+    public static void SetResponseStringSize(DialogueData data)
+    {
+        while (data.currentResponseStringsSize != data.responseStringsSize)
+        {
+            if (data.currentResponseStringsSize < data.responseStringsSize)
+            {
+                data.respnseStrings.Add("");
+                data.currentResponseStringsSize++;
+            }
+            else if (data.currentResponseStringsSize > data.responseStringsSize)
+            {
+                data.respnseStrings.RemoveAt(data.currentResponseStringsSize - 1);
+                data.currentResponseStringsSize--;
             }
         }
     }

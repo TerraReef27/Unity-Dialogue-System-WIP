@@ -27,9 +27,9 @@ public class DialogueWindow : EditorWindow
         GUILayout.Label("Name", EditorStyles.boldLabel);
         currentObject.speakerName = GUILayout.TextField(currentObject.speakerName);
 
-        GUILayout.Label("Dialogue Strings", EditorStyles.boldLabel);
+        GUILayout.Label("Dialogue Nodes", EditorStyles.boldLabel);
 
-        GUILayout.Label("Number of strings");
+        GUILayout.Label("Number of nodes");
         currentObject.dialogueStringsSize = EditorGUILayout.IntField(currentObject.dialogueStringsSize);
         if(GUILayout.Button("Update List Size"))
         {

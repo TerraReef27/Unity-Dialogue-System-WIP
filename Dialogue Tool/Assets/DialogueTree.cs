@@ -10,10 +10,14 @@ public class DialogueTree
         public string[] dialogueStrings;
         public string[] responses;
 
-        private int placement;
+        public int index;
+        private int parentNode;
+        private int childNode;
     }
 
     public List<dialogueNode> tree;
+
+    private int currentNode = 0;
 
     private int treeSize;
     public int TreeSize
@@ -28,11 +32,24 @@ public class DialogueTree
 
     private void ResizeTree()
     {
+        //Used to change the size of the tree
         throw new NotImplementedException();
     }
 
     private void AddToTree()
     {
+        //Used to add extra nodes to the tree
+    }
 
+    private dialogueNode GetNode(int index)
+    {
+        //Traverse tree
+        //Stop once index is found
+        foreach(dialogueNode node in tree)
+        {
+            if (node.index == index)
+                return node;
+        }
+        throw new Exception("This node does not exist in the tree");
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class DialogueObject : MonoBehaviour
 {
-    [SerializeField] private DialogueData data;
+    [SerializeField] private DialogueData data = null;
 
     public Vector3 interacableRange = new Vector3 (1, 1, 1);
 
